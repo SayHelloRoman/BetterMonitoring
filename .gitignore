@@ -1,0 +1,4 @@
+*.pyc
+tests/*
+poetry.lock
+dist
