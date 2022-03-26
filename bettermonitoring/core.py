@@ -44,7 +44,7 @@ class HttpClient:
         })
 
         req = self.client.build_request(method, url, headers=headers)
-        r = await self.client.send(req, timeout=None)
+        r = await self.client.send(req)
 
         return r.json()
 
