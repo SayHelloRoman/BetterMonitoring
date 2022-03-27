@@ -1,8 +1,11 @@
-<h1 style="text-align: center" > BetterMonitoring </h1>
+
+<h1 align="center"> BetterMonitoring </h1>
 
 ---
 
-<img style="justify-content: center;" src="https://img.shields.io/pypi/dm/bettermonitoring">
+<p align="center">
+    <img src="https://img.shields.io/pypi/dm/bettermonitoring" alt="">
+</p>
 
 ## Installation
 
