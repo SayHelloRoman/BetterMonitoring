@@ -8,7 +8,7 @@ TEMPLATE_URL = "{}/{}"
 
 
 class HttpClient:
-    base_url = "https://monitor.betterbot.ru/api"
+    base_url = "https://api.bettercord.xyz/v1/"
     client = httpx.AsyncClient()
 
     async def make_request(
