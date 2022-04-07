@@ -39,7 +39,7 @@ class HttpClient:
 
     async def send_bot_stats(self, server_count: int, shard_count: int) -> bool:
         json = await self.make_request(
-            "GET",
+            "POST",
             f"bots/stats",
             {
                 "Authorization": self.token,	
@@ -61,7 +61,7 @@ class HttpClient:
 
         return json["vote"]
     
-    async def get_bot_comments(self, bot_id: int) -> List[Comment]:
+    async def get_bot_comments(self, bot_id: int) -> Optional[List[Comment]]:
         json = await self.make_request(
             "GET",
             f"bots/{bot_id}/comments"
@@ -71,7 +71,7 @@ class HttpClient:
             return list(
                 map(
                     lambda i: Comment(**i),
-                    json
+                    json["reviews"]
                 )
             )
     

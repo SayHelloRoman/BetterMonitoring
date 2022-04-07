@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 from dataclasses import dataclass
 
 
@@ -15,6 +15,7 @@ class Bot:
     coowners: List[str]
     tags: List[str]
     longDesc: str
+    background: str
     certificate: str
     github: str
     support: str
@@ -28,8 +29,8 @@ class User:
     biography: str
     website: str
     github: str
-    twitter: str
     instagram: str
+    twitter: Optional[str] = None 
 
 
 @dataclass
